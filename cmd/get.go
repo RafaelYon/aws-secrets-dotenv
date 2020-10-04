@@ -63,11 +63,11 @@ func getCommnad(cmd *cobra.Command, args []string) {
 		showErrorAndExit(fmt.Errorf("Creating %s falied: %w", fileName, err))
 	}
 
+	defer file.Sync()
+
 	for key, value := range secrets {
 		if _, err := file.WriteString(fmt.Sprintf("%s=%s\n", key, value)); err != nil {
 			showErrorAndExit(fmt.Errorf("Writing dotenv falied: %w", err))
 		}
 	}
-
-	file.Sync()
 }
