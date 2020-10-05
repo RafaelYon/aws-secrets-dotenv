@@ -44,7 +44,7 @@ func getCommnad(cmd *cobra.Command, args []string) {
 	}
 
 	if len(versionStage) > 0 {
-		awsInput.VersionStage = &versionID
+		awsInput.VersionStage = &versionStage
 	}
 
 	secretsData, err := awsSession.GetSecretValue(awsInput)
