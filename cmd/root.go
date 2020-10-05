@@ -27,7 +27,7 @@ func Execute() {
 }
 
 func showErrorAndExit(err error) {
-	fmt.Print(err)
+	fmt.Println(err)
 	os.Exit(1)
 }
 
