@@ -63,6 +63,7 @@ func getCommnad(cmd *cobra.Command, args []string) {
 		showErrorAndExit(fmt.Errorf("Creating %s falied: %w", fileName, err))
 	}
 
+	defer file.Close()
 	defer file.Sync()
 
 	for key, value := range secrets {
