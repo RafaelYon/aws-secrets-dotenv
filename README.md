@@ -4,7 +4,7 @@ A simple tool to obtain the secrets stored in AWS Secrets Manager in dotenv form
 ## Installing
 
 ### Requirements
- - Golang `1.15` or higher
+ - Golang `1.11` or higher
  - AWS access key ID and secret access key stored in your machine (`ENV`s or `~/.aws/credentials`)
 
 ### Getting
@@ -18,7 +18,7 @@ $ go get github.com/RafaelYon/aws-secrets-dotenv
 The entry point of the tool is the executable `aws-secrets-dotenv`. With this it is possible to view all commands and options by executing:
 
 ```
-$ aws-secrets-dotenv help
+$ aws-secrets-dotenv
 ```
 
 It is important to note that **these examples assume that the `$GOPATH/bin` directory has been added to your environment's `$PATH`.**
