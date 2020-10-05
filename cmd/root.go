@@ -11,7 +11,7 @@ var rootCmd = &cobra.Command{
 	Use:   "aws-secrets-dotenv",
 	Short: "A AWS Secrets Manager json secret to dotenv tool",
 	Run: func(cmd *cobra.Command, args []string) {
-
+		cmd.Help()
 	},
 }
 
